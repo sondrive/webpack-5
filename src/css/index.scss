@@ -1,15 +1,44 @@
+@import './variables.scss';
+@import './mixins.scss';
+
 body {
-    background-color: aquamarine;  
+    background-color: $main-color;
 }
 
 
-h1 {
-    font-family: sans-serif;
-    text-transform: uppercase;
-}
 
-@media (max-width: 500px) {
-    body {
-        background-color: red;
+.carousel {
+    &__title {
+        color: red;
+        font-size: $big-font-size;
+    }
+    &__subtitle {
+        color: blue;
+        box-shadow: $main-box-shadow;
+    }
+    &__link {
+        &--active {
+            color: green;
+            font-size: $main-font-size;
+            &:hover {
+                color: red;
+                font-size: $main-font-size;
+            }
+        }
     }
 }
+
+.class1 {
+    @include wygladButton(100px, 50px, 14px);
+    &:hover {
+        background-color: lightgray;
+    }
+}
+
+.class2 {
+    @include wygladButton(60px, 25px, 14px);
+    &:hover {
+        background-color: lightgray;
+    }
+}
+

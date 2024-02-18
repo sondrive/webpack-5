@@ -1,0 +1,7 @@
+@mixin wygladButton($width, $height, $font-size) {
+    width: $width;
+    height: $height;
+    background-color: lightblue;
+    font-size: $font-size;
+    cursor: pointer;
+}
